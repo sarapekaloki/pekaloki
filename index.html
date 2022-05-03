@@ -2,67 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customise HTML5 video player</title>
 
-    <title>Peka loki</title>
-<!--     <link rel="stylesheet" href="style.css"> -->
     <style>
-    body{
-    background: #f4f4f4;
-    color: #555;
-    font-family: Aria,Helvetica,sans-serif;
-    font-size: 16px;
-    line-height: 1.6em;
-    margin:0;
-}
-header{
-    background-color: #673e7d;
-    color:#fff;
-    margin:auto;
-    height: 200px;
-    overflow:hidden;
+        body{
+            background: #f4f4f4;
+            color: #555;
+            font-family: Aria,Helvetica,sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+            margin:0;
+        }
+        header{
+            background-color: #673e7d;
+            color:#fff;
+            margin:auto;
+            height: 200px;
+            overflow:hidden;
 
-}
-h2{
+        }
+        h2{
 
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 4em;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.container{
-    display: flex;
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 4em;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .container{
+            display: flex;
 
-}
-div{
-    padding: 30px;
+        }
+        div{
+            padding: 30px;
 
-}
-h1{
-    font-family: "Trebuchet MS", sans-serif;
-    text-align: center;
-    font-size: 1.5em;
+        }
+        h1{
+            font-family: "Trebuchet MS", sans-serif;
+            text-align: center;
+            font-size: 1.5em;
 
-}
+        }
     </style>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-        <h2>Bienvenidos a pekaloki.com</h2>
-    </header>
+<header>
+    <h2>Bienvenidos a pekaloki.com</h2>
+</header>
 
-    <div class="container">
-        <div>
-            <h1> Video 1: Boomshakalaka x Pitufos</h1>
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/1RNft8NLFYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            <h1> Video 2: Duendes captados en camara</h1>
-            <iframe width="300" height="200" src="https://www.youtube.com/embed/87Bpdqh8brA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-    </div>
+<h1>Video 1: Sort</h1>
+<div class="container">
+
+    <video class="video-js vjs-custom-theme " width="400" height="300" data-setup="{}" loop controls>
+        <source src="sort.mp4" type="video/mp4" />
+    </video>
+
+</div>
+<h1>Video 2: Rocky</h1>
+<div class="container">
+
+    <video width="400" height="300" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
+        <source src="rocky.mp4" type="video/mp4"/>
+    </video>
+</div>
+
+<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
 
 </body>
 </html>

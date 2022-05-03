@@ -11,9 +11,7 @@
     <style>
         body{
             background: #f4f4f4;
-            color: #555;
-       
-            
+            color: #212121;
             margin:0;
         }
         header{
@@ -27,9 +25,10 @@
         h2{
 
             font-family: "Trebuchet MS", sans-serif;
-            font-size: 3em;
+            font-size: 2em;
             letter-spacing: -2px;
-            line-height: 3.3em;
+            
+            line-height: 2.3em;
             text-transform: uppercase;
             text-align: center;
         }
@@ -37,8 +36,10 @@
             display: flex;
 
         }
-        div{
+        .video{
+           
             padding: 30px;
+            background-color: #dbd9db;
 
         }
         h1{
@@ -56,20 +57,24 @@
     <h2>Conoces multithreading?</h2>
 </header>
 
-<h1>Video 1: Sort</h1>
-<div class="container">
 
+<div class="container">
+    
+    <div class="video">
+        <h1>Video 1: Sort</h1>
     <video class="video-js vjs-custom-theme " width="400" height="300" data-setup="{}" loop controls>
         <source src="sort.mp4" type="video/mp4" />
     </video>
-
-</div>
-<h1>Video 2: Rocky</h1>
-<div class="container">
-
-    <video width="400" height="300" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
+    </div>
+    <div class="video">
+        <h1>Video 2: Rocky</h1>
+         <video width="400" height="300" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
         <source src="rocky.mp4" type="video/mp4"/>
     </video>
+    
+    </div>
+
+   
 </div>
 
 <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>

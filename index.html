@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PekaLoki</title>
-     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
-    
+
     <style>
         body{
             background: #fff;
@@ -19,6 +19,7 @@
             color:#fff;
             margin:auto;
             height: 100px;
+            width: 100%;
             overflow:hidden;
 
         }
@@ -27,24 +28,27 @@
             font-family: "Trebuchet MS", sans-serif;
             font-size: 2em;
             letter-spacing: -2px;
-            
+
             line-height: 2.3em;
             text-transform: uppercase;
             text-align: center;
         }
         .container{
             display: flex;
-            position:absolute; 
-            left:250px; 
-            top:200px;
+            flex-wrap: wrap;
+
+            left: 25%;
+            top:20%;
+
 
         }
         .video{
-           
+
             padding: 30px;
             margin: 20px;
             background-color: #dbd9db;
             border-radius: 30px;
+
 
         }
         h1{
@@ -54,7 +58,7 @@
 
         }
     </style>
- 
+
 
 </head>
 <body>
@@ -64,22 +68,22 @@
 
 
 <div class="container">
-    
+
     <div class="video">
         <h1>Video 1: Sort</h1>
-    <video class="video-js vjs-custom-theme " width="400" height="300" data-setup="{}" loop controls>
-        <source src="sort.mp4" type="video/mp4" />
-    </video>
+        <video width="300px" height="200px" class="video-js vjs-custom-theme "  data-setup="{}" loop controls>
+            <source src="sort.mp4" type="video/mp4" />
+        </video>
     </div>
     <div class="video">
         <h1>Video 2: Rocky</h1>
-         <video width="400" height="300" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
-        <source src="rocky.mp4" type="video/mp4"/>
-    </video>
-    
+        <video  width="300px" height="200px" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
+            <source src="rocky.mp4" type="video/mp4"/>
+        </video>
+
     </div>
 
-   
+
 </div>
 
 <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>

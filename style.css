@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #8495ab;
+}
+.container{
+    width: 80%;
+    margin: 80px auto;
+}
+.container h1{
+    padding: 60px 0;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col{
+    flex-basis: 50%;
+    min-width: 250px;
+}
+.feature-img{
+    width: 83%;
+    margin:auto;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.small-img-row{
+    display: flex;
+    background: #aeb2b5;
+    margin: 20px 0;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 85%;
+}
+.small-img{
+    position: relative;
+}
+.small-img img{
+    width: 150px;
+
+}
+.small-img-row p{
+    margin-left: 20px;
+    color: #fff;
+    line-height: 35px;
+    font-size: 30px;
+    font-family: 'IM Fell DW Pica', serif;
+    font-style: italic;
+
+}
+.play-btn{
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+.small-img .play-btn{
+    width: 70px;
+
+}
+.video-player{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-35%);
+    display: none;
+
+}
+video:focus{
+    outline: none;
+}
+.close-btn{
+    position: absolute;
+    top:3px;
+    right: 10px;
+    width:  40px;
+    cursor: pointer;
+}

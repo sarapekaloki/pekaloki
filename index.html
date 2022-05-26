@@ -2,92 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PekaLoki</title>
-    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
-
-    <style>
-        body{
-            background: #fff;
-            color: #212121;
-            margin:0;
-        }
-        header{
-            background-color: #3765b0;
-            color:#fff;
-            margin:auto;
-            height: 100px;
-            width: 100%;
-            overflow:hidden;
-
-        }
-        h2{
-
-            font-family: "Trebuchet MS", sans-serif;
-            font-size: 2em;
-            letter-spacing: -2px;
-
-            line-height: 2.3em;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .container{
-            display: flex;
-            flex-wrap: wrap;
-
-            left: 25%;
-            top:20%;
-
-
-        }
-        .video{
-
-            padding: 30px;
-            margin: 20px;
-            background-color: #dbd9db;
-            border-radius: 30px;
-
-
-        }
-        h1{
-            font-family: "Trebuchet MS", sans-serif;
-            text-align: center;
-            font-size: 1.5em;
-
-        }
-    </style>
-
+    <title>TA proyecto final</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
 
 </head>
 <body>
-<header>
-    <h2>Conoces multithreading?</h2>
-</header>
-
-
 <div class="container">
+    <h1> Equvialencia ER-AFI</h1>
+    <div class="row">
+        <div class="col">
+        <div class="feature-img">
+            <img src="Images/01.png" width="100%">
+            <img src="Images/play.png" class="play-btn" onclick="playVideo('Videos/Intro.mp4')">
 
-    <div class="video">
-        <h1>Video 1: Sort</h1>
-        <video width="300px" height="200px" class="video-js vjs-custom-theme "  data-setup="{}" loop controls>
-            <source src="sort.mp4" type="video/mp4" />
-        </video>
+        </div>
+        </div>
+        <div class="col">
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/02.jpeg">
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/Conocimiento previo.mp4')">
+                </div>
+                <p>Conocimiento previo</p>
+            </div>
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/03.jpeg" >
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/Equivalencia ER y AF.mp4')">
+                </div>
+                <p>Teoría equivalencia ER a AFI</p>
+            </div>
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/04.jpeg" >
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/Primeros 3 casos.mp4')">
+                </div>
+                <p>Primeros 3 casos</p>
+            </div>
+        </div>
     </div>
-    <div class="video">
-        <h1>Video 2: Rocky</h1>
-        <video  width="300px" height="200px" class="video-js vjs-custom-theme " data-setup="{}" loop controls>
-            <source src="rocky.mp4" type="video/mp4"/>
-        </video>
+    <div class="row">
+        <div class="col">
+            <div class="feature-img">
+                <img src="Images/05.jpeg" width="100%">
+                <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/Cerradura operaciones regulares.mp4')">
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/06.jpeg">
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/ejemplo.mp4')">
+                </div>
+                <p>Ejemplo 1: <br> a*b (a U b)*</p>
+            </div>
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/07.jpeg" >
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/Ejemplo2.mp4')">
+                </div>
+                <p>Ejemplo 2: <br> [((00)* (11)) U 01]*]</p>
+            </div>
+            <div class="small-img-row">
+                <div class="small-img">
+                    <img src="Images/08.jpeg" >
+                    <img src="Images/play.png" class="play-btn"  onclick="playVideo('Videos/cuestionario.mp4')">
+                </div>
+                <p><a href="https://forms.gle/UdZbAKq2hbh5NdLu6">Cuestionario</a></p>
+            </div>
+        </div>
 
     </div>
-
-
 </div>
 
-<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+<div class="video-player" id="videoPlayer">
+    <video width="100%" controls autoplay id="myVideo">
+        <source src="Videos/Intro.mp4" type="video/mp4">
+    </video>
+    <img src="Images/close.png" class="close-btn" onclick="stopVideo()">
+</div>
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
 
+    function stopVideo(){
+        myVideo.pause();
+        videoPlayer.style.display="none";
+
+    }
+    function playVideo(file){
+       myVideo.src =file;
+       videoPlayer.style.display = "block";
+    }
+</script>
 
 </body>
 </html>
